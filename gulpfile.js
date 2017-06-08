@@ -28,9 +28,9 @@ gulp.task('sonarqube', ['test'], function(callback) {
         serverUrl: "https://sonarqube.com",
         options: {
             "sonar.organization": "CM-PROJECT-2017",
-            "sonar.projectKey": "CM-TicketFlow",
+            "sonar.projectKey": "CM-TicketFlow:master",
             "sonar.login": "a772f44af88fd9b5eb974746c02bb2729c4342f0",
-            "sonar.projectName": "node-todolist",
+            "sonar.projectName": "TicketFlow",
             "sonar.working.directory": "./.sonar",
             "sonar.tests": "test",
             "sonar.javascript.lcov.reportPath": "coverage/lcov.info",
