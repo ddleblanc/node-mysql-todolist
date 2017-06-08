@@ -1,11 +1,11 @@
 //
 // Gulpfile waarmee je, naast heel veel andere zaken, een SonarQube.com analyse kunt genereren.
-// 
+//
 // Installeer gulp via 'npm install gulp' (zie package.json).
 // In package.json staat een script-regel om een analyse te genereren.
-// Voer deze uit via 'gulp sonarqube' of via npm run sonar'. 
-// Het resultaat van je analyse zie je - wanneer je een account hebt - 
-// op https://sonarqube.com. 
+// Voer deze uit via 'gulp sonarqube' of via npm run sonar'.
+// Het resultaat van je analyse zie je - wanneer je een account hebt -
+// op https://sonarqube.com.
 //
 var gulp = require('gulp');
 var sonarqubeScanner = require('sonarqube-scanner');
@@ -20,16 +20,16 @@ var mocha = require('gulp-mocha');
 gulp.task('sonarqube', ['test'], function(callback) {
     // gulp.task('sonarqube', function(callback) {
     //
-    // Info over instellingen van sonarqubeScanner: 
+    // Info over instellingen van sonarqubeScanner:
     // https://docs.sonarqube.org/display/SONAR/Analysis+Parameters
     //
     // ----------------------------------------------------
     sonarqubeScanner({
         serverUrl: "https://sonarqube.com",
         options: {
-            "sonar.organization": "avansinformaticabreda",
-            "sonar.projectKey": "avansinformaticabreda:master",
-            "sonar.login": "9ff8119ecea9f6c15d6c461a62dcc2d8db3439e1",
+            "sonar.organization": "CM-PROJECT-2017",
+            "sonar.projectKey": "CM-TicketFlow",
+            "sonar.login": "a772f44af88fd9b5eb974746c02bb2729c4342f0",
             "sonar.projectName": "node-todolist",
             "sonar.working.directory": "./.sonar",
             "sonar.tests": "test",
